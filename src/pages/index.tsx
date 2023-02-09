@@ -9,7 +9,7 @@ import logoImg from '@/assets/Logo.svg'
 
 export default function SignIn() {
     async function handleSignIn() {
-        signIn('github')
+        await signIn('github')
     }
 
     return (
@@ -19,7 +19,7 @@ export default function SignIn() {
             </Head>
 
             <div className="flex h-screen w-full flex-col items-center justify-center">
-                <div className="flex h-full max-h-[25rem] w-full max-w-sm flex-col items-center justify-center gap-10 rounded bg-zinc-900">
+                <div className="flex h-full max-h-[25rem] w-full max-w-sm flex-col items-center justify-center gap-10 rounded-lg bg-zinc-900">
                     <Image
                         src={logoImg}
                         alt="Logo"
@@ -62,7 +62,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     if (session)
         return {
             redirect: {
-                destination: '/app',
+                destination: '/dashboard',
                 permanent: false,
             },
         }
