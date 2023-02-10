@@ -27,7 +27,7 @@ export function Summary() {
                 </strong>
             </div>
 
-            <div className="rounded-lg bg-green-800 py-6 px-8 shadow-md">
+            <div className="rounded-lg bg-green-700 py-6 px-8 shadow-md">
                 <div className="flex w-full items-center justify-between pb-3">
                     <span className="text-[#C4C4CC]">Total</span>
 

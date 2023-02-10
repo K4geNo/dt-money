@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
+import { SearchForm } from '@/components/SearchForm'
 import { Summary } from '@/components/Summary'
 import { getSession } from 'next-auth/react'
 
@@ -23,6 +24,8 @@ export default function Transactions() {
                 <Summary />
 
                 <div className="mx-auto mt-16 mb-0 w-full">
+                    <SearchForm />
+
                     <table className="mt-6 w-full border-separate border-spacing-x-0 border-spacing-y-2">
                         <tbody>
                             <tr>
