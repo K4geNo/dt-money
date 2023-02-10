@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .transaction-td {
+        @apply bg-[#29292E] py-5 px-8 first:rounded-tl-lg first:rounded-bl-lg last:rounded-br-lg last:rounded-tr-lg;
+    }
+}
