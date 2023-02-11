@@ -1,6 +1,8 @@
+import * as Dialog from '@radix-ui/react-dialog'
 import * as Separator from '@radix-ui/react-separator'
 
 import Image from 'next/image'
+import { NewTransactionModal } from '../NewTransactionModal'
 import logo from '@/assets/Logo.svg'
 import { useSession } from 'next-auth/react'
 
@@ -13,9 +15,13 @@ export function Header() {
                 <Image src={logo} alt="" />
 
                 <div className="flex items-center">
-                    <button className="rounded-md bg-green-700 py-3 px-5 font-bold transition-colors hover:bg-green-600">
-                        Nova transação
-                    </button>
+                    <Dialog.Root>
+                        <Dialog.Trigger className="rounded-md bg-green-700 py-3 px-5 font-bold transition-colors hover:bg-green-600">
+                            Nova transação
+                        </Dialog.Trigger>
+
+                        <NewTransactionModal />
+                    </Dialog.Root>
 
                     <Separator.Root
                         className="mx-8 h-8 w-px bg-white"
